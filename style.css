@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #000;
+  background: #e3a7a7;
   color: white;
   position: sticky;
   top: 0;
@@ -31,6 +31,31 @@ body {
   background: red;
   padding: 6px 12px;
   border-radius: 5px;
+}
+
+/* LOGO Section */
+.logo {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
 }
 
 /* Hamburger hidden on desktop */
@@ -84,10 +109,16 @@ body {
   margin: 10px;
   text-decoration: none;
 }
+.btn:hover{
+  background: rgb(243, 111, 111);
+}
 
 .btn.outline {
   border: 1px solid white;
   background: transparent;
+}
+.btn.outline:hover{
+  background: rgb(193, 122, 122);
 }
 
 .courses {
