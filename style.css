@@ -8,18 +8,63 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: #edc6c6;
+  align-items: center;
+  padding: 15px 20px;
+  background: #000;
   color: white;
   position: sticky;
   top: 0;
-  align-items: center;
+  z-index: 1000;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
 }
 
 .navbar a {
-  color: rgb(28, 26, 26);
-  margin: 0 10px;
+  color: white;
   text-decoration: none;
+}
+
+.dashboard-btn {
+  background: red;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
 }
 
 .hero {
@@ -182,4 +227,66 @@ button {
   padding: 10px;
   border: none;
   width: 100%;
+}
+
+
+/* Responsive Website */
+/* Universal Fix */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* COURSES */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+}
+
+@media (max-width: 768px){
+  .card {
+    width: 90%;
+  }
+}
+
+/* FORM */
+form input, select {
+  width: 90%;
+  max-width: 400px;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Add spacing for mobile */
+section {
+  padding: 40px 20px;
 }

@@ -78,3 +78,7 @@ function logout(){
   localStorage.removeItem("loggedIn");
   window.location.href = "login.html";
 }
+
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
