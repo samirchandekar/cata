@@ -9,6 +9,8 @@
 
 <!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
@@ -17,9 +19,9 @@
 <!-- 🔥 NAVBAR -->
 <header class="navbar">
   <div class="logo">
-  <img src="images/WhatsApp_Image_2026-04-06_at_1.54.15_PM-removebg-preview.png" alt="Catalyst Academy Logo" width="80px">
-  <!-- <span>CAS</span> -->
-</div>
+    <img src="images/WhatsApp_Image_2026-04-06_at_1.54.15_PM-removebg-preview.png" alt="Catalyst Academy Logo" width="80px">
+  </div>
+
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <nav id="navMenu">
@@ -49,7 +51,8 @@
 
 <!-- 🎓 COURSES -->
 <section id="courses" class="courses">
-  <h2 style="align-content: center;">Courses Offered</h2><hr>
+  <h2 style="text-align: center;">Courses Offered</h2><hr>
+
   <div class="card">
     <h3>CBSE Board</h3>
     <p>10th - ₹35,000/year</p>
@@ -69,11 +72,8 @@
   <div class="card">
     <h3>Science (11th & 12th)</h3>
     <p>11th + 12th - ₹40,000/year</p>
-    <br>
-    <br>
     <p>11th + 12th with MHT-CET - ₹45,000/year</p>
   </div>
-
 </section>
 
 <!-- 🌞 SUMMER CAMP -->
@@ -86,6 +86,7 @@
 
 <!-- 📝 FORM -->
 <section id="form" class="form-section">
+  <br><br><br><br>
   <h2>Admission Inquiry</h2>
 
   <form id="admissionForm">
@@ -131,26 +132,71 @@
   <iframe src="https://maps.google.com/maps?q=Nagpur&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/917666049943" class="whatsapp">💬</a>
-
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
+<!-- 📸 INSTAGRAM -->
 <section class="instagram">
   <h2>Follow Us on Instagram</h2>
 
   <div class="insta-grid">
-    <img src="images/360_F_928531048_45ay4GSNYJuTLIHKtuR255O9ndjsHg5x.jpg" />
-    <img src="images/download.jpg" />
-    <img src="images/istockphoto-2105091005-612x612.jpg" />
-    <img src="images/friends-people-group-teamwork-diversity_53876-31488.avif" />
+    <img src="images/360_F_928531048_45ay4GSNYJuTLIHKtuR255O9ndjsHg5x.jpg">
+    <img src="images/download.jpg">
+    <img src="images/istockphoto-2105091005-612x612.jpg">
+    <img src="images/friends-people-group-teamwork-diversity_53876-31488.avif">
   </div>
 </section>
 
+<!-- 🔢 COUNTER -->
 <h2 class="counter" data-target="500">0</h2>
 <p>Students Enrolled</p>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/917666049943" class="whatsapp">💬</a>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+/* ✅ FIX: toggleMenu */
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+/* ✅ FIX: Form */
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("successMsg").innerText = "✅ Form Submitted Successfully!";
+});
+
+/* ✅ FIX: Counter */
+document.querySelectorAll(".counter").forEach(counter => {
+  counter.innerText = "0";
+
+  const update = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const inc = target / 100;
+
+    if(count < target){
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(update, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
+
+/* ✅ FIX: GSAP safe run */
+window.onload = function(){
+  gsap.from(".hero h1", {y:-50, opacity:0, duration:1});
+  gsap.from(".hero p", {opacity:0, delay:0.5, duration:1});
+};
+</script>
 
 </body>
 </html>

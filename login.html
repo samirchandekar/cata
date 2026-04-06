@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - CAS</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,14 +12,15 @@
 <div class="login-box">
   <h2>Student Login</h2>
 
-  <input type="text" id="username" placeholder="Student ID">
-  <input type="password" id="password" placeholder="Password">
+  <input type="text" id="username" placeholder="Student ID" required>
+  <input type="password" id="password" placeholder="Password" required>
 
   <button onclick="login()">Login</button>
 
   <p id="error"></p>
 </div>
 
+<!-- ✅ Keep JS at bottom -->
 <script src="script.js"></script>
 
 </body>

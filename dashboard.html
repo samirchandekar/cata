@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ✅ AUTH CHECK (safe) -->
 <script>
 if(localStorage.getItem("loggedIn") !== "true"){
   window.location.href = "login.html";
@@ -15,7 +18,10 @@ if(localStorage.getItem("loggedIn") !== "true"){
 
 <div class="dashboard">
   <h1>Welcome Student 👋</h1>
-    <button onclick="logout()">Logout</button>
+
+  <!-- ✅ Logout works now -->
+  <button onclick="logout()">Logout</button>
+
   <div class="dash-cards">
     <div class="card">
       <h3>Attendance</h3>
@@ -40,6 +46,9 @@ if(localStorage.getItem("loggedIn") !== "true"){
   </ul>
 
 </div>
+
+<!-- ✅ IMPORTANT: Load JS -->
+<script src="script.js"></script>
 
 </body>
 </html>

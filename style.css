@@ -1,3 +1,4 @@
+/* ✅ FIXED BODY (removed duplicate) */
 body {
   margin: 0;
   font-family: Arial;
@@ -5,6 +6,7 @@ body {
   color: #111;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -33,10 +35,10 @@ body {
   border-radius: 5px;
 }
 
-/* LOGO Section */
+/* ✅ FIXED LOGO */
 .logo {
   display: flex;
-  align-items: left;
+  align-items: center; /* fixed */
   gap: 10px;
 }
 
@@ -46,26 +48,21 @@ body {
   object-fit: contain;
 }
 
-
-/* 📱 Mobile */
+/* MOBILE LOGO */
 @media (max-width: 768px) {
   .logo img {
     height: 30px;
   }
-
-  .logo span {
-    font-size: 16px;
-  }
 }
 
-/* Hamburger hidden on desktop */
+/* TOGGLE */
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-/* 📱 MOBILE VIEW */
+/* ✅ FIXED MOBILE NAVBAR */
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -79,8 +76,15 @@ body {
     background: black;
     flex-direction: column;
     width: 200px;
-    display: none;
     padding: 20px;
+
+    /* 🔥 FIX: use transform instead of display */
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+    z-index: 999;
   }
 
   .navbar nav a {
@@ -88,10 +92,13 @@ body {
   }
 
   .navbar nav.active {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
+/* HERO */
 .hero {
   height: 90vh;
   background: linear-gradient(to right, #000, #c00000);
@@ -102,6 +109,22 @@ body {
   align-items: center;
 }
 
+.hero h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* BUTTON */
 .btn {
   background: red;
   padding: 10px 20px;
@@ -109,6 +132,7 @@ body {
   margin: 10px;
   text-decoration: none;
 }
+
 .btn:hover{
   background: rgb(243, 111, 111);
 }
@@ -117,27 +141,39 @@ body {
   border: 1px solid white;
   background: transparent;
 }
+
 .btn.outline:hover{
   background: rgb(193, 122, 122);
 }
 
+/* COURSES */
 .courses {
   padding: 50px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* ✅ FIXED CARD (single definition) */
 .card {
   background: #f4f4f4;
   padding: 20px;
   margin: 10px;
-  display: inline-block;
-  width: 250px;
-  height: 250px;
-}
-.card:hover {
-    background-color: #f93a3a;
+  width: 300px;
 }
 
+.card:hover {
+  background-color: #f93a3a;
+}
+
+@media (max-width: 768px){
+  .card {
+    width: 90%;
+  }
+}
+
+/* SUMMER */
 .summer {
   background: red;
   color: white;
@@ -150,6 +186,7 @@ body {
   padding: 5px 10px;
 }
 
+/* FORM */
 .form-section {
   padding: 50px;
   text-align: center;
@@ -159,20 +196,24 @@ form input, select {
   display: block;
   margin: 10px auto;
   padding: 10px;
-  width: 250px;
+  width: 90%;
+  max-width: 400px;
 }
 
+/* BUTTON */
 button {
   background: black;
   color: white;
   padding: 10px 20px;
 }
 
+/* CONTACT */
 .contact iframe {
   width: 100%;
   height: 300px;
 }
 
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -183,10 +224,7 @@ button {
   border-radius: 50%;
 }
 
-
-
-/* Dashboard */
-
+/* DASHBOARD */
 .dashboard {
   padding: 40px;
   text-align: center;
@@ -196,16 +234,16 @@ button {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .dash-cards .card {
   background: #111;
   color: white;
-  padding: 20px;
   border-radius: 10px;
 }
 
-
+/* INSTAGRAM */
 .instagram {
   padding: 50px;
   text-align: center;
@@ -227,15 +265,7 @@ button {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-/* Login Page */
+/* LOGIN */
 .login-box {
   width: 300px;
   margin: 100px auto;
@@ -260,9 +290,7 @@ button {
   width: 100%;
 }
 
-
-/* Responsive Website */
-/* Universal Fix */
+/* GLOBAL */
 * {
   box-sizing: border-box;
 }
@@ -271,53 +299,7 @@ img {
   max-width: 100%;
 }
 
-/* HERO */
-.hero h1 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-@media (max-width: 768px){
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* COURSES */
-.courses {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  width: 300px;
-}
-
-@media (max-width: 768px){
-  .card {
-    width: 90%;
-  }
-}
-
-/* FORM */
-form input, select {
-  width: 90%;
-  max-width: 400px;
-}
-
-
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* Add spacing for mobile */
+/* SECTION SPACING */
 section {
   padding: 40px 20px;
 }
