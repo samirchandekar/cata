@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalyst Academy of Science</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- 🔥 NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/WhatsApp_Image_2026-04-06_at_1.54.15_PM-removebg-preview.png" alt="CAS Logo" width="80px">
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#form">Admission</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Dashboard</a>
+  </nav>
+</header>
+
+<!-- 🔥 HERO -->
+<section id="home" class="hero">
+  <h1>Build Your Future with Catalyst Academy</h1>
+  <p>Concept-based learning for real success</p>
+  <div class="btns">
+    <a href="#form" class="btn">Enroll Now</a>
+    <a href="#contact" class="btn outline">Contact Us</a>
+  </div>
+</section>
+
+<!-- 📚 ABOUT -->
+<section class="about" data-aos="fade-up">
+  <h2>About Us</h2>
+  <p>We provide expert coaching for CBSE & State Board students with concept-based teaching, regular tests, and personal attention.</p>
+</section>
+
+<!-- 🎓 COURSES -->
+<section id="courses" class="courses">
+  <h2>Courses Offered</h2>
+
+  <div class="card">
+    <h3>CBSE Board</h3>
+    <p>10th - ₹35,000/year</p>
+    <p>9th - ₹22,000/year</p>
+    <p>8th - ₹15,000/year</p>
+    <p>3rd–7th - ₹1,200/month</p>
+  </div>
+
+  <div class="card">
+    <h3>State Board</h3>
+    <p>10th - ₹15,000/year</p>
+    <p>9th - ₹13,000/year</p>
+    <p>8th - ₹1,000/month</p>
+    <p>3rd–7th - ₹800/month</p>
+  </div>
+
+  <div class="card">
+    <h3>Science (11th & 12th)</h3>
+    <p>11th + 12th - ₹40,000/year</p>
+    <br>
+    <br>
+    <p>11th + 12th with MHT-CET - ₹45,000/year</p>
+  </div>
+
+</section>
+
+<!-- 🌞 SUMMER CAMP -->
+<section class="summer">
+  <h2>Special Summer Camp</h2>
+  <p>For 3rd to 8th Students</p>
+  <h3>₹800 Only</h3>
+  <span class="badge">Limited Seats</span>
+</section>
+
+<!-- 📝 FORM -->
+<section id="form" class="form-section">
+  <h2>Admission Inquiry</h2>
+
+  <form id="admissionForm">
+    <input type="text" placeholder="Student Name" required>
+    <input type="date" required>
+    <input type="text" placeholder="Standard">
+    <input type="text" placeholder="Address">
+    <input type="number" placeholder="Mobile Number" required>
+    <input type="text" placeholder="Parent Name">
+    <input type="number" placeholder="Parent Mobile Number">
+    <input type="text" placeholder="School Name">
+    <input type="text" placeholder="Previous %">
+    
+    <select>
+      <option>Board</option>
+      <option>CBSE</option>
+      <option>State</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="successMsg"></p>
+</section>
+
+<!-- ⭐ WHY US -->
+<section class="why">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>Expert Faculty</li>
+    <li>Concept-Based Learning</li>
+    <li>Regular Tests</li>
+    <li>Personal Attention</li>
+  </ul>
+</section>
+
+<!-- 📞 CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Nagpur - Near Maa Ganga Celebration Lawn</p>
+  <p>📞 7666049943 / 8983594642</p>
+
+  <iframe src="https://maps.google.com/maps?q=Nagpur&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/917666049943" class="whatsapp">💬</a>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<section class="instagram">
+  <h2>Follow Us on Instagram</h2>
+
+  <div class="insta-grid">
+    <img src="images/360_F_928531048_45ay4GSNYJuTLIHKtuR255O9ndjsHg5x.jpg" />
+    <img src="images/download.jpg" />
+    <img src="images/istockphoto-2105091005-612x612.jpg" />
+    <img src="images/friends-people-group-teamwork-diversity_53876-31488.avif" />
+  </div>
+</section>
+
+<h2 class="counter" data-target="500">0</h2>
+<p>Students Enrolled</p>
+
+</body>
+</html>

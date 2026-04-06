@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fff;
+  color: #111;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #edc6c6;
+  color: white;
+  position: sticky;
+  top: 0;
+  align-items: center;
+}
+
+.navbar a {
+  color: rgb(28, 26, 26);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #000, #c00000);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: red;
+  padding: 10px 20px;
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.btn.outline {
+  border: 1px solid white;
+  background: transparent;
+}
+
+.courses {
+  padding: 50px;
+  text-align: center;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+}
+.card:hover {
+    background-color: #f93a3a;
+}
+
+.summer {
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.badge {
+  background: black;
+  padding: 5px 10px;
+}
+
+.form-section {
+  padding: 50px;
+  text-align: center;
+}
+
+form input, select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  padding: 15px;
+  color: white;
+  border-radius: 50%;
+}
+
+
+
+/* Dashboard */
+
+.dashboard {
+  padding: 40px;
+  text-align: center;
+}
+
+.dash-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dash-cards .card {
+  background: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.instagram {
+  padding: 50px;
+  text-align: center;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.insta-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.insta-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* Login Page */
+.login-box {
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #111;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.login-box input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.login-box button {
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}

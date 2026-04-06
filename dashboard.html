@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("loggedIn") !== "true"){
+  window.location.href = "login.html";
+}
+</script>
+
+<div class="dashboard">
+  <h1>Welcome Student 👋</h1>
+    <button onclick="logout()">Logout</button>
+  <div class="dash-cards">
+    <div class="card">
+      <h3>Attendance</h3>
+      <p>85%</p>
+    </div>
+
+    <div class="card">
+      <h3>Test Score</h3>
+      <p>78%</p>
+    </div>
+
+    <div class="card">
+      <h3>Fees Status</h3>
+      <p>Paid ✅</p>
+    </div>
+  </div>
+
+  <h2>Recent Tests</h2>
+  <ul>
+    <li>Math Test - 75%</li>
+    <li>Science Test - 82%</li>
+  </ul>
+
+</div>
+
+</body>
+</html>
