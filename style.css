@@ -12,8 +12,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #e3a7a7;
-  color: white;
+  background: #eccbcb;
+  color: rgb(24, 21, 21);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,7 +25,7 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: rgb(16, 14, 14);
   text-decoration: none;
 }
 
@@ -113,6 +113,28 @@ body {
   font-size: 3rem;
   text-align: center;
 }
+
+/* Logo Animation */
+.image-box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  animation: swing 2s ease-in-out infinite;
+}
+
+/* 🔄 Left to Right Rotation */
+@keyframes swing {
+  0%   { transform: rotate(-10deg); }  /* left */
+  50%  { transform: rotate(10deg); }   /* right */
+  100% { transform: rotate(-10deg); }  /* back left */
+}
+
+
+
+
+
 
 @media (max-width: 768px){
   .hero h1 {
