@@ -1,9 +1,50 @@
-// ✅ FORM (safe check)
+// ✅ FORM (WhatsApp Integration)
 const form = document.getElementById("admissionForm");
+
 if(form){
   form.addEventListener("submit", function(e){
     e.preventDefault();
-    document.getElementById("successMsg").innerText = "✅ Form Submitted Successfully!";
+
+    const inputs = form.querySelectorAll("input, select");
+
+    const data = {
+      name: inputs[0].value,
+      dob: inputs[1].value,
+      standard: inputs[2].value,
+      address: inputs[3].value,
+      mobile: inputs[4].value,
+      parent: inputs[5].value,
+      parentMobile: inputs[6].value,
+      school: inputs[7].value,
+      percent: inputs[8].value,
+      board: inputs[9].value
+    };
+
+    const message = `📚 New Admission Inquiry:
+    
+👤 Name: ${data.name}
+🎂 DOB: ${data.dob}
+📘 Standard: ${data.standard}
+🏠 Address: ${data.address}
+📱 Student Mobile: ${data.mobile}
+👨‍👩‍👦 Parent Name: ${data.parent}
+📞 Parent Mobile: ${data.parentMobile}
+🏫 School: ${data.school}
+📊 Previous %: ${data.percent}
+📖 Board: ${data.board}`;
+
+    const phoneNumber = "917666049943";
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+    const msg = document.getElementById("successMsg");
+    if(msg){
+      msg.innerText = "✅ Redirecting to WhatsApp...";
+    }
+
+    form.reset();
   });
 }
 
